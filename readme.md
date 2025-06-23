@@ -110,5 +110,3 @@ MIT (or your preferred license)
 Lucent Innovation
 
 ---
-
-Let me know if you'd like this published on GitHub or packaged as a Dockerized CLI tool.
