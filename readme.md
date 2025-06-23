@@ -16,8 +16,8 @@ And receive intelligent answers with file references and summaries.
 - Support for JavaScript, TypeScript, JSON, Markdown files
 - Automatically excludes irrelevant directories like `node_modules`, `.git`, etc.
 - Context-aware answers using GPT-4
-- CLI interface for interactive queries
-- Customizable via `.env`
+- Available in both CLI and Streamlit web app
+- Customizable via `.env` or UI input
 
 ---
 
@@ -43,7 +43,11 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
+---
+
+## Option 1: CLI Version (main.py)
+
+### 4A. Configure Environment Variables
 
 Create a `.env` file at the root:
 
@@ -52,7 +56,7 @@ OPENAI_API_KEY=your_openai_key
 DIRECTORY_PATH=./your-nodejs-project
 ```
 
-### 5. Run the Agent
+### 5A. Run the CLI Tool
 
 ```bash
 python main.py
@@ -65,7 +69,23 @@ Codebase Navigator Ready. Ask a question about the Node.js project.
 >>
 ```
 
-Type your question and the agent will respond.
+---
+
+## Option 2: Web App Version (Streamlit)
+
+### 4B. Run the Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+### 5B. In your browser:
+
+- Enter your **OpenAI API Key**
+- Enter the **directory path** to your codebase
+- Ask a question like:
+  - "Where is user role validation implemented?"
+  - "How is the login flow handled?"
 
 ---
 
@@ -82,17 +102,9 @@ Type your question and the agent will respond.
 
 ---
 
-## Example Questions
-
-- "Where are user roles defined?"
-- "How is token verification done in the backend?"
-- "Which files modify the booking status?"
-
----
-
 ## Roadmap Ideas
 
-- Web UI using Streamlit or FastAPI
+- Web UI enhancements
 - Multi-language support (Python, Java, etc.)
 - Context memory for multi-turn conversations
 - GitHub integration for PR summaries
@@ -108,5 +120,3 @@ MIT (or your preferred license)
 ## Maintainer
 
 Lucent Innovation
-
----
